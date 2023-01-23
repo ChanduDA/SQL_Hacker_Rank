@@ -1,0 +1,11 @@
+# Using concat function in sql
+  # Syntax : CONCAT(expression1, expression2, expression3,...)
+  # Def : The CONCAT() function adds two or more expressions together.
+SELECT CONCAT(Name, '(', LEFT(Occupation,1) ,')') 
+FROM OCCUPATIONS
+ORDER BY Name;
+
+SELECT CONCAT('There are a total of ', COUNT(Occupation), ' ', LOWER(Occupation), 's.')
+FROM OCCUPATIONS 
+GROUP BY Occupation
+ORDER BY COUNT(OCCUPATION) ASC, Occupation;
